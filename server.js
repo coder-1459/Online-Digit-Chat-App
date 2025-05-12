@@ -5,11 +5,11 @@ const path = require('path');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server, {
-    cors: {
-        origin: "*",
-        methods: ["GET", "POST"]
-    }
+const io = require('socket.io')(server, {
+  cors: {
+    origin: "*", // or specify your Vercel frontend URL
+    methods: ["GET", "POST"]
+  }
 });
 
 // Serve static files
