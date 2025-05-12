@@ -333,3 +333,16 @@ body {
     background-color: #d32f2f;
     color: white;
 }
+.write-effect {
+    font-size: 2.5rem;
+    text-align: center;
+    color: transparent;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(90deg, #25d366, #075e54);
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 2rem auto;
+    overflow: hidden;
