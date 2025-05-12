@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize socket connection
     // const socket = io('http://localhost:3000');
-    const socket = io("https://your-chat-backend.onrender.com");
+    const socket = io("https://online-digit-chat-app.onrender.com");
     
     let currentUser = null;
     let currentRoom = null;
