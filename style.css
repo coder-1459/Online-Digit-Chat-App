@@ -35,6 +35,36 @@ body {
     height: 100%;
     width: 100%;
 }
+.author-credit {
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Courier New', monospace;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid #555;
+    white-space: nowrap;
+    letter-spacing: 2px;
+    animation:
+        typing 3s steps(24, end) forwards,
+        blink-caret 0.75s step-end infinite;
+    display: inline-block;
+    width: 0;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 240px; } /* You can tweak this width */
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #555; }
+}
 
 #login-page.active,
 #chat-page.active {
