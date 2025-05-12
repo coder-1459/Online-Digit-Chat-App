@@ -1,0 +1,10 @@
+#login-page,
+#chat-page {
+    display: none;
+    height: 100%;
+}
+
+#login-page.active,
+#chat-page.active {
+    display: block;
+}

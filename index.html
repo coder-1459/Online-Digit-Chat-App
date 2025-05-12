@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Login Page -->
+      <div id="login-page" class="active">
+        <div class="form-container">
+          <h1>Welcome to ChatApp</h1>
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter your username"
+            />
+          </div>
+          <div class="input-group">
+            <label for="room-code">Room Code</label>
+            <input
+              type="text"
+              id="room-code"
+              placeholder="Enter 5-digit code"
+              maxlength="5"
+            />
+            <button id="generate-code">Generate Code</button>
+          </div>
+          <button id="join-btn">Join Chat</button>
+        </div>
+      </div>
+
+      <!-- Chat Page -->
+      <div id="chat-page">
+        <div class="chat-header">
+          <h2>ChatApp</h2>
+          <div class="room-info">
+            <p>Room Code: <span id="display-room-code"></span></p>
+            <button id="leave-btn">Leave Chat</button>
+          </div>
+        </div>
+        <div class="chat-container">
+          <div id="chat-messages"></div>
+          <!-- <div class="message-input">
+                    <input type="text" id="message-input" placeholder="Type your message...">
+                    <button id="send-btn">Send</button>
+                </div> -->
+          <div class="message-input">
+            <label for="file-input" class="attachment-btn">+</label>
+            <input
+              type="file"
+              id="file-input"
+              accept="image/*"
+              style="display: none"
+            />
+
+            <input
+              type="text"
+              id="message-input"
+              placeholder="Type your message..."
+            />
+            <button id="send-btn">&#9658;</button>
+          </div>
+
+          <!-- Image Preview Modal -->
+          <div id="image-preview-modal" class="hidden">
+            <div class="preview-content">
+              <img id="image-preview" src="" alt="Image preview" />
+              <button id="send-image-btn">Send Image</button>
+              <button id="cancel-image-btn">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
