@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sendBtn = document.getElementById('send-btn');
 
     // Initialize socket connection
-    const socket = io('http://localhost:3000');
+    // const socket = io('http://localhost:3000');
+    const socket = io("https://your-chat-backend.onrender.com");
     
     let currentUser = null;
     let currentRoom = null;
